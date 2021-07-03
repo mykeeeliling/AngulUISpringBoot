@@ -1,0 +1,19 @@
+
+                        
+<div class="container testimonials">
+    <div class="row">
+        <div *ngFor="let employee of employees" class="col-md-4 testimonial">
+            <div class="row">
+                <div class="avatar col-md-5">
+                    <img class="img-circle" src="https://bootdey.com/img/Content/user_3.jpg" alt="Taylor Otwell">
+                </div>
+        
+                <div class="testimonial-main col-md-7">
+                    <h5 class="media-heading"><a href="#m">{{employee.firstName}} {{employee.lastName}}</a></h5>
+                    <p class="testimony-body">{{employee.employeeNumber}}</p>
+                    <p class="testimony-body">{{employee.department}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                    
