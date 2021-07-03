@@ -16,4 +16,7 @@ export class EmployeeComponent implements OnInit {
     this.employeeService.getEmployees().subscribe((employees) => (this.employees = employees));
   }
 
+  sendDeleteRequest(employee: Employee){
+    this.employeeService.deleteEmployee(employee).subscribe(() => (this.employees = this.employees.filter(e => e.employeeNumber !== employee.employeeNumber)));
+  }
 }

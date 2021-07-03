@@ -1,19 +1,20 @@
-
-                        
-<div class="container testimonials">
-    <div class="row">
-        <div *ngFor="let employee of employees" class="col-md-4 testimonial">
-            <div class="row">
-                <div class="avatar col-md-5">
-                    <img class="img-circle" src="https://bootdey.com/img/Content/user_3.jpg" alt="Taylor Otwell">
-                </div>
-        
-                <div class="testimonial-main col-md-7">
-                    <h5 class="media-heading"><a href="#m">{{employee.firstName}} {{employee.lastName}}</a></h5>
-                    <p class="testimony-body">{{employee.employeeNumber}}</p>
-                    <p class="testimony-body">{{employee.department}}</p>
-                </div>
-            </div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container">
+<div class="row bootstrap snippets bootdeys">
+    <div *ngFor="let employee of employees" class="col-md-3">
+      <div class="panel widget">
+        <div class="widget-header bg-primary"></div>
+        <div class="widget-body text-center">
+          <img alt="Profile Picture" class="widget-img img-circle img-border-light" src="https://bootdey.com/img/Content/avatar/avatar1.png">
+          <h4 class="mar-no">{{employee.firstName}} {{employee.lastName}}</h4>
+          <p class="text-muted mar-btm">{{employee.department}}</p>
+    
+          <div class="pad-ver">
+            <button class="btn btn-primary">Edit</button>
+            <button (click)="deleteEmployeeButton(employee)" class="btn btn-danger">Delete</button>
+          </div>
         </div>
-    </div>
-</div>                    
+      </div>
+    </div>  
+</div>
+</div>

@@ -10,17 +10,17 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons';
 })
 export class EmployeeCardComponent implements OnInit {
   @Input() employees!: Employee[];
+  @Output() deleteEmployee: EventEmitter<Employee> = new EventEmitter();
   deleteIcon = faTimes;
   editIcon = faPencilAlt;
 
   constructor() { }
 
   ngOnInit(): void {
-
+    
   }
 
-  deleteEmployee(employee: any){
-    console.log(employee);
+  deleteEmployeeButton(employee: any){
+    this.deleteEmployee.emit(employee);
   }
-
 }
